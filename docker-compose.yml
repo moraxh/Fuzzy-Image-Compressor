@@ -1,0 +1,6 @@
+services:
+  fuzzy-image-compressor:
+    build: .
+    volumes:
+      - .:/app
+    command: make run
