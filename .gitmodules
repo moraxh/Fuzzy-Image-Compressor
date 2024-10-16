@@ -1,0 +1,3 @@
+[submodule "lib/PNGLoader"]
+  path = lib/PNGLoader
+  url = https://github.com/moraxh/PNGLoader

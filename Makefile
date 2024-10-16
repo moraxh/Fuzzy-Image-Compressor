@@ -1,11 +1,14 @@
 # Compiler
 CC = gcc
 
+# Include Dirs
+INCLUDE_DIRS = lib/PNGLoader include
+
 # Flags of the compiler
-CFLAGS = -Wall -Iinclude -std=c99
+CFLAGS = -Wall -std=c99 $(addprefix -I,$(INCLUDE_DIRS))
 
 # Object files
-OBJS = build/main.o
+OBJS = build/main.o build/pngloader.o
 
 # Target 
 TARGET = build/main
@@ -16,6 +19,9 @@ all: $(TARGET)
 # Rule to build the target
 $(TARGET): $(OBJS)
 	$(CC) $(CFLAGS) -o $(TARGET) $(OBJS)
+
+build/pngloader.o: lib/PNGLoader/pngloader.c lib/PNGLoader/pngloader.h
+	$(CC) $(CFLAGS) -c lib/PNGLoader/pngloader.c -o build/pngloader.o
 
 build/main.o: src/main.c
 	$(CC) $(CFLAGS) -c src/main.c -o build/main.o
