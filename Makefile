@@ -2,7 +2,7 @@
 CC = gcc
 
 # Flags of the compiler
-CFLAGS = -Wall -Iinclude
+CFLAGS = -Wall -Iinclude -std=c99
 
 # Object files
 OBJS = build/main.o
