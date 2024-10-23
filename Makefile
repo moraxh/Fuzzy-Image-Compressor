@@ -5,7 +5,7 @@ CC = gcc
 INCLUDE_DIRS = lib/PNGLoader include
 
 # Flags of the compiler
-CFLAGS = -g -Wall -std=c11 $(addprefix -I,$(INCLUDE_DIRS))
+CFLAGS = -g -std=c11 $(addprefix -I,$(INCLUDE_DIRS))
 
 # Object files
 OBJS = build/main.o build/pngloader.o
