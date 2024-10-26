@@ -35,5 +35,4 @@ run: $(TARGET)
 
 # Windows clean
 clean:
-	del /q build\*.o 
-	del /q $(TARGET)
+	del /q build
